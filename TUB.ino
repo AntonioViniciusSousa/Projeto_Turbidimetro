@@ -10,22 +10,22 @@ void loop(){
     ntu = analogRead(A0);
     voltagem = (ntu/1023)*5;
   
-  Serial.print("Sinal bruto: ");
-  Serial.println(ntu);
-  Serial.print("Sinal tratado: ");
-  Serial.println(voltagem);
-  delay(1000);
+    Serial.print("Sinal bruto: ");
+    Serial.println(ntu);
+    Serial.print("Sinal tratado: ");
+    Serial.println(voltagem);
+    delay(1000);
 
-  if (voltagem < 2.5){
-    Serial.println("Equipamento: 3000 NTU");
+  if (voltagem < 3.058){
+    Serial.println("Equipamento: 1000 NTU");
   }
   
-  else if (voltagem > 4.2){
+  else if (voltagem > 4.24){
     Serial.println("Equipamento: 0 NTU");
   }
   
   else{
-  sensor = (-1120.4 * (voltagem * voltagem)) + (5742.3 * voltagem) - 4353.8;
+  sensor = ((voltagem - 4,2331) / - 0.0012);
   Serial.print("Equipamento: ");
   Serial.print(sensor);
   Serial.println(" NTU");
