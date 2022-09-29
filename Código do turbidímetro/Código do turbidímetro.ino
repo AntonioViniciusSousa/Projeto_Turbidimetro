@@ -14,9 +14,9 @@ void loop() {
   Serial.println(sinalAnalogico);               //Mostra no monitor serial o valor correspondente ao sinal analógico
   Serial.print("Tensão = ");
   Serial.println(tensao);                       //Mostra no monitor serial o valor correspondente a tensão elétrica
-  sensorNTU = (-2.5768 + tensao) / -0.0026;
+  sensorNTU = (-2.5768 + tensao) / -0.0026;     //Equação da turbidez
   Serial.print("Equipamento = ");
   Serial.println(sensorNTU);                    //Mostra no monitor serial o valor correspondente a turbidez
   
-  delay(600);                                   //Espera 600 milisegundos para retornar ao inicio (void loop)
+  delay(600);                                   //Aguarda seiscentos milisegundos para retornar ao void loop
 }
